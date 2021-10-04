@@ -4,7 +4,7 @@ import serial.tools.list_ports
 from Adafruit_IO import MQTTClient
 
 AIO_USERNAME = "bombeoo"
-AIO_KEY = "aio_RwTt21T6lLDeArNtEZurmmiJQMZn"
+AIO_KEY = ""
 
 AIO_FEED_BUTTON = ["feed-led", "feed-fan"]
 AIO_FEED_TEMP = "feed-temp"
