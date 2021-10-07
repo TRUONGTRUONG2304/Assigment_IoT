@@ -1,6 +1,6 @@
 from Adafruit_IO import MQTTClient
 AIO_USERNAME = "iotg06"
-AIO_KEY = "aio_pZLL43LGAxfNGAXoiLtYy6LCOd0X"
+AIO_KEY = ""
 
 FEED_DOOR = "iot.door"
 FEED_FAN = "iot.fan"
