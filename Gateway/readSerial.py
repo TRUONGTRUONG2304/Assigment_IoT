@@ -1,5 +1,7 @@
 import serial.tools.list_ports
-from processData import *
+import globals as g
+from publishData import *
+
 
 def getPort():
     ports = serial.tools.list_ports.comports()
@@ -14,10 +16,12 @@ def getPort():
             break
     return commPort
 
+
 if getPort() != "None":
     ser = serial.Serial(port=getPort(), baudrate=115200)
     print("Connected with " + getPort())
-    isComConnect = True
+    g.isComConnect = True
+
 
 def readSerial():
     bytesToRead = ser.inWaiting()
@@ -26,7 +30,7 @@ def readSerial():
         while ("#" in mess) and ("!" in mess):
             start = mess.find("!")
             end = mess.find("#")
-            processData(mess[start:end+1])
+            publishData(mess[start:end+1])
             if (end == len(mess)):
                 mess = ""
             else:

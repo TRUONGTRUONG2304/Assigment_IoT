@@ -1,5 +1,13 @@
+from Adafruit_IO import MQTTClient
 AIO_USERNAME = "iotg06"
-AIO_KEY = "aio_vRMZ99EI0MAHXOyspNN1ZGUVlEHz"
+AIO_KEY = "aio_pZLL43LGAxfNGAXoiLtYy6LCOd0X"
 
-AIO_FEED_BUTTON = ["feed-led", "feed-fan"]
-AIO_FEED_DATA = ["feed-temp", "feed-humi"]
+FEED_DOOR = "door"
+FEED_FAN = "fan"
+FEED_HUMIDITY = "humidity"
+FEED_LIGHT = "light"
+FEED_REFRESHER = "refresher"
+FEED_TEMP = "temp"
+FEED_WARNING = "warning"
+
+client = MQTTClient(AIO_USERNAME, AIO_KEY)

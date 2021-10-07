@@ -8,3 +8,5 @@ numOfAttempts = 0
 waiting_period = 0
 sending_mess_again = 0
 dataSave = []
+
+isComConnect = False
