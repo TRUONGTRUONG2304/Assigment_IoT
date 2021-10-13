@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="bku.solution.iot.vn.androidmobile.HomeActivity">
+    <TextView
+        android:id="@+id/header"
+        app:layout_widthPercent="100%"
+        android:background="#bcf0f7"
+        app:layout_heightPercent="40%"
+        app:layout_marginStartPercent="0%"
+        app:layout_marginTopPercent="0%"
+
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+    <ImageView
+        android:background="@drawable/warehouse"
+        app:layout_widthPercent="25%"
+        app:layout_heightPercent="15%"
+        app:layout_marginStartPercent="0%"
+        app:layout_marginTopPercent="2%"
+        />
+
+    <TextView
+        android:id="@+id/titlee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:text="WAREHOUSE"
+        android:textColor="?android:attr/fastScrollTextColor"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_marginStartPercent="25%"
+        app:layout_marginTopPercent="7%" />
+
+    <Button
+        android:id="@+id/btnlogOut"
+        android:layout_alignEnd="@+id/btnDevice"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/logout"
+        android:gravity="center"
+        app:layout_heightPercent="7%"
+        app:layout_marginStartPercent="80%"
+        app:layout_marginTopPercent="2%"
+        app:layout_widthPercent="10%" />
+
+    <TextView
+        android:id="@+id/back_home"
+        android:layout_alignParentBottom="true"
+
+        android:layout_alignParentStart="true"
+        android:background="@drawable/background_home"
+        android:fontFamily="cursive"
+        android:gravity="center_horizontal"
+        android:text="Select one"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_heightPercent="80%"
+        app:layout_marginStartPercent="0%"
+        app:layout_marginTopPercent="20%"
+        app:layout_widthPercent="100%" />
+    <Button
+        android:id="@+id/btnSensor"
+        android:background="@drawable/custom_btn"
+        app:layout_widthPercent="40%"
+        app:layout_heightPercent="25%"
+        app:layout_marginStartPercent="5%"
+        app:layout_marginTopPercent="35%"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:gravity="fill"
+        android:text="DATA" />
+    <ImageView
+        android:background="@drawable/ic_door"
+        app:layout_widthPercent="12%"
+        app:layout_heightPercent="7%"
+        app:layout_marginStartPercent="27%"
+        app:layout_marginTopPercent="52%"/>
+    <ImageView
+        android:background="@drawable/ic_temp"
+        app:layout_widthPercent="12%"
+        app:layout_heightPercent="7%"
+        app:layout_marginStartPercent="27%"
+        app:layout_marginTopPercent="35%"/>
+    <ImageView
+        android:background="@drawable/ic_humi"
+        app:layout_widthPercent="12%"
+        app:layout_heightPercent="6%"
+        app:layout_marginStartPercent="32%"
+        app:layout_marginTopPercent="44%"/>
+    <Button
+        android:id="@+id/btnDevice"
+        android:background="@drawable/custom_btn"
+        app:layout_widthPercent="40%"
+        app:layout_heightPercent="25%"
+        app:layout_marginStartPercent="55%"
+        app:layout_marginTopPercent="35%"
+
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:gravity="fill"
+        android:text="DEVICE" />
+    <ImageView
+        android:background="@drawable/ic_aircondition"
+        app:layout_widthPercent="15%"
+        app:layout_heightPercent="7%"
+        app:layout_marginStartPercent="79%"
+        app:layout_marginTopPercent="35%"/>
+    <ImageView
+        android:background="@drawable/ic_light"
+        app:layout_widthPercent="10%"
+        app:layout_heightPercent="7%"
+        app:layout_marginStartPercent="84%"
+        app:layout_marginTopPercent="44%"/>
+    <ImageView
+        android:background="@drawable/ic_fan"
+        app:layout_widthPercent="13%"
+        app:layout_heightPercent="7%"
+        app:layout_marginStartPercent="79%"
+        app:layout_marginTopPercent="52%"/>
+    <Button
+        android:id="@+id/btnGraph"
+        android:background="@drawable/custom_btn"
+        app:layout_widthPercent="40%"
+        app:layout_heightPercent="25%"
+        app:layout_marginStartPercent="5%"
+        app:layout_marginTopPercent="65%"
+
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="GRAPH" />
+    <ImageView
+        android:background="@drawable/ic_graph1"
+        app:layout_widthPercent="15%"
+        app:layout_heightPercent="7%"
+        app:layout_marginStartPercent="18%"
+        app:layout_marginTopPercent="67%"/>
+    <ImageView
+        android:background="@drawable/ic_graph2"
+        app:layout_widthPercent="15%"
+        app:layout_heightPercent="9.5%"
+        app:layout_marginStartPercent="18%"
+        app:layout_marginTopPercent="80%"/>
+    <Button
+        android:id="@+id/btnHistory"
+        android:background="@drawable/custom_btn"
+        app:layout_widthPercent="40%"
+        app:layout_heightPercent="25%"
+        app:layout_marginStartPercent="55%"
+        app:layout_marginTopPercent="65%"
+
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="HISTORY" />
+
+</android.support.percent.PercentRelativeLayout>
