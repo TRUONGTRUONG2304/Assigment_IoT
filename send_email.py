@@ -3,7 +3,8 @@ import requests
 import math
 import random
 
-TOKEN = "BBFF-vUFnhxoMZL1oBRFKKpjdP7WnTDvrcS"  # Put your TOKEN here
+# Put your TOKEN here
+TOKEN = "BBFF-vUFnhxoMZL      alo 1 2 3 4              1oBRFKKpjdP7WnTDvrcS"
 DEVICE_LABEL = "machine"  # Put your device label here
 VARIABLE_LABEL_1 = "temp"  # Put your first variable label here
 VARIABLE_LABEL_2 = "humi"  # Put your second variable label here
