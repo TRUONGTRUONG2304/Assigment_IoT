@@ -1,12 +1,13 @@
-INTERVAL_TIME_MS = 10000
-TIMEOUT_MS = 2000
-LONG_SLEEP_MS = 60000
-MAX_NUM_OF_ATTEMPTS = 5
-lastPayload = 0
-lastSentOK = True
-numOfAttempts = 0
-waiting_period = 0
-sending_mess_again = 0
-dataSave = []
+TIME_TO_RESEND = 3000  # 3s
+TIME_TO_READ = 60000  # 60s
+TIME_SLEEP = 5000  # 5s
+MAX_NUM_OF_SLEEP = 2
+MAX_NUM_OF_RESEND = 3
 
+lastSentOK = True
+isSendAgain = False
+
+data = ""
+dataSave = ""
 isComConnect = False
+isReadOk = False

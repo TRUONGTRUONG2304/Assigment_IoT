@@ -1,6 +1,5 @@
 import serial.tools.list_ports
 import globals as g
-from publishData import *
 
 
 def getPort():
@@ -27,11 +26,11 @@ def readSerial():
     bytesToRead = ser.inWaiting()
     if (bytesToRead > 0):
         mess = ser.read(bytesToRead).decode("UTF-8")
-        while ("#" in mess) and ("!" in mess):
-            start = mess.find("!")
-            end = mess.find("#")
-            publishData(mess[start:end+1])
-            if (end == len(mess)):
-                mess = ""
-            else:
-                mess = mess[end+1:]
+        start = mess.find("!")
+        end = mess.find("#")
+        g.data = mess[start:end+1]
+        mess = ""
+    if g.data != "":
+        return True
+    else:
+        return False
