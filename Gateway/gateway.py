@@ -20,18 +20,15 @@ def main():
     isSleep = False
     timeSleep = 0
     numOfSleep = 0
+    ser.write(("!#").encode())
     while True:
         if g.isComConnect:
-            # readSerial()
             if isRead == 0 and g.lastSentOK:
-                ser.write(("!#").encode())
-                while not readSerial():
-                    readSerial()
+                readSerial()
                 isRead = g.TIME_TO_READ
-                # if g.data != "":
+                ser.write(("!#").encode())
                 publishData(g.data, False)
                 g.dataSave = g.data
-                g.data = ""
                 g.lastSentOK = False
                 timeResend = g.TIME_TO_RESEND
                 numOfResend = 0

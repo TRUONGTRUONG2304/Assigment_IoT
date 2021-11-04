@@ -2,6 +2,7 @@ import sys
 from aio_config import *
 import globals as g
 import requests
+from readSerial import *
 
 
 def connected(client):
@@ -13,6 +14,7 @@ def connected(client):
     client.subscribe(FEED_REFRESHER)
     client.subscribe(FEED_TEMP)
     client.subscribe(FEED_WARNING)
+    client.subscribe(FEED_AUTODOOR)
 
 
 def subscribe(client, userdata, mid, granted_qos):
@@ -26,8 +28,10 @@ def disconnected(client):
 
 def message(client, feed_id, payload):
 
-    if feed_id == FEED_REFRESHER or feed_id == FEED_LIGHT or feed_id == FEED_FAN:
+    if feed_id == FEED_REFRESHER or feed_id == FEED_LIGHT or feed_id == FEED_FAN or feed_id == FEED_AUTODOOR:
         print(feed_id + " received new request: " + payload)
+        ser.write((str(feed_id) + " received new request:" +
+                  str(payload) + "#").encode())
 
     if feed_id == FEED_TEMP or feed_id == FEED_HUMIDITY or feed_id == FEED_DOOR:
         g.lastSentOK = True
@@ -35,7 +39,7 @@ def message(client, feed_id, payload):
         # pass
 
 
-TOKEN = "BBFF-vUFnhxoMZL1oBRFKKpjdP7WnTDvrcS"
+TOKEN = "BBFF-vUFnhxoMZL1o----------------------BRFKKpjdP7WnTDvrcS"
 url = "https://things.ubidots.com"
 url = "{}/api/v1.6/devices/{}".format(url, "iot")
 headers = {"X-Auth-Token": TOKEN, "Content-Type": "application/json"}
